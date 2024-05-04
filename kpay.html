@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="kpay.css"/>
+</head>
+<body>
+    <marquee class="py-2 mb-5">Hello</marquee>
+    <div class="container-sm">
+        <div class="title mb-3 mb-lg-5">
+            <h2>&zwnj;ငွေသွင်း</h2>
+        </div>
+        <div class="box4 mb-3">
+            <div class="box4_con">
+                <div class="box4_header">
+                    <div class="head_col_1 mb-2">
+                        <span>လက်ကျန်ငွေ</span>
+                    </div>
+                    <div class="head_col_1">
+                        <div class="head_val">
+                            <span>MMK </span>
+                            <span style="color:white;">0.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box4_body">
+                    <div class="selectedBank">
+                        <img class="bankDisplayImg" src="./Images/kpay.jpg"/>
+                        <span class="bankDisplayName">K PAY</span>
+                    </div>
+                    <div class="bankDetail">
+                        <table width="100%" class="detailTable">
+                            <tbody>
+                                <tr>    
+                                    <td>ဘဏ် အကောင့် နာမည်</td>
+                                    <td>
+                                        <span id="bank_acc_name_span">
+                                            <span id="text1">U Kyaw</span>
+                                            <a id="btn1" style="cursor:pointer">
+                                                <i style="color:#6b29bc;" class="far fa-copy"></i>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ဘဏ် အကောင့် နံပါတ်</td>
+                                    <td>
+                                        <span id="bank_acc_no_span">
+                                            <span id="text2">09546789213</span>
+                                            <a id="btn2" style="cursor:pointer">
+                                                <i style="color:#6b29bc;" class="far fa-copy"></i>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="form_wrap">
+                        <div class="label_wrap">
+                            <label class="form_label">ပမာဏ</label>
+                            <label class="form_label_notis">Min: 1000.00</label>
+                        </div>
+                        <input type="tel" pattern="[0-9]*" class="form-control" placeholder="Max: 9999999 / Min: 1000" id="dep_amount">
+                        <div class="bank_amount_grid">
+                            <button type="button" class="btn-amt" value="5000">5,000</button>
+                            <button type="button" class="btn-amt" value="10000">10,000</button>
+                            <button type="button" class="btn-amt" value="15000">15,000</button>
+                            <button type="button" class="btn-amt" value="20000">20,000</button>
+                            <button type="button" class="btn-amt" value="25000">25,000</button>
+                            <button type="button" class="btn-amt" value="30000">30,000</button>
+                            <button type="button" class="btn-amt" value="35000">35,000</button>
+                            <button type="button" class="btn-amt" value="40000">40,000</button>
+                            <button type="button" class="btn-amt" value="45000">45,000</button>
+                            <button type="button" class="btn-amt" value="50000">50,000</button>
+                            <button type="button" class="btn-amt" value="100000">100,000</button>
+                            <button type="button" class="btn-amt" value="200000">200,000</button>
+                        </div>
+                    </div>
+                    <div class="form_wrap">
+                        <label class="form_label">ပြေစာ</label>
+                        <input type="file" class="form-control" id="TrxReceipt">
+                    </div>
+                    <div class="form_wrap">
+                        <div class="submit_btn_wrap">
+                            <button class="backBtn" type="button" onclick="window.location.href='./deposit.html';">ပြန်လာ</button>
+                            <button class="payBtn" type="button">တင်သွင်းသည်</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get all buttons with class "btn-amt"
+        const buttons = document.querySelectorAll('.btn-amt');
+        
+        // Get the input element
+        const inputBox = document.getElementById('dep_amount');
+        
+        // Add click event listener to each button
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Set the value of the input box to the value of the clicked button
+                inputBox.value = this.value;
+            });
+        });
+    </script>
+
+    <script>
+        // Get text elements and buttons by their IDs
+        const text1 = document.getElementById('text1');
+        const text2 = document.getElementById('text2');
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+        
+        // Function to copy text to clipboard
+        function copyTextToClipboard(text) {
+            // Create a temporary textarea element
+            const tempTextArea = document.createElement('textarea');
+            // Set the value of the textarea to the text content
+            tempTextArea.value = text;
+            // Append the textarea to the body
+            document.body.appendChild(tempTextArea);
+            // Select the text inside the textarea
+            tempTextArea.select();
+            // Copy the selected text to the clipboard
+            document.execCommand('copy');
+            // Remove the textarea from the body
+            document.body.removeChild(tempTextArea);
+            // Display an alert
+            alert('Copied to clipboard');
+        }
+        
+        // Add click event listeners to buttons
+        btn1.addEventListener('click', function() {
+            copyTextToClipboard(text1.textContent);
+        });
+        
+        btn2.addEventListener('click', function() {
+            copyTextToClipboard(text2.textContent);
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var numericInput = document.getElementById('dep_amount');
+            
+            numericInput.addEventListener('input', function() {
+                var regex = /^[0-9]*$/;
+                if (!regex.test(this.value)) {
+                    this.value = this.value.replace(/[^0-9]/g, '');
+                }
+            });
+        });
+    </script>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+</html>

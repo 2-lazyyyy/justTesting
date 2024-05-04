@@ -1,0 +1,149 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
+
+body{
+    line-height: 1.6;
+    color: #ffffff;
+    font-size: 1rem;
+    background: #010022 url(./Images/bg.jpg) no-repeat center top;
+    font-weight: 400;
+}
+
+marquee{
+    background-color: rgba(0, 0, 0, 0.321);
+    font-size: 1.2rem;
+}
+
+.box1{
+    background-color: #24262b00;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 16px;
+    display: grid;
+    padding-left: 0;
+    grid-gap: 10px;
+    justify-content: center;
+    box-shadow: 0 0 9px 4px #6b29bc;
+}
+
+.profileImg{
+    text-align: center;
+}
+
+.profileImg img{
+    border-radius: 100%;
+    width: 80px;
+    border: 5px solid #dee3f026;
+}
+
+.MoneyExist{
+    text-align: center;
+}
+
+.box2{
+    padding: 1.5rem;
+    background: #24262b;
+    border-radius: 16px;
+}
+
+.menu{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #fff;
+    display: grid;
+    text-align: center;
+    grid-gap: 3px;
+    line-height: 1.2;
+    align-items: end;
+}
+
+.menu a i{
+    font-size: 23px;
+}
+
+.box3{
+    padding: 1.5rem;
+    background: #24262b;
+    border-radius: 16px;
+    box-shadow: 0 0 9px 4px #6b29bc;
+    display: grid;
+}
+
+.box3_row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+}
+
+.box3_rowleft_con{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.box3_rowleft_con i,.box3_rowleft_con p{
+    margin: 0;
+    font-weight: 600;
+    color: #ecf1ffb3;
+}
+
+.box3_rowright_con p{
+    margin: 0;
+    font-weight: 700;
+    color: #ecf1ffb3;
+}
+
+.box3_hr{
+    margin: 2px;
+    border-color: #dee3f00d;
+}
+
+.box3_rowright_con .chgpw{
+    background-color: #dee3f00d;
+    border-radius: 8px;
+    color: #ecf1fff0;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.logout{
+    background-color: transparent;
+    height: 52px;
+    border-radius: 10px;
+    border: 1px solid #ed474b;
+    color: #ed474b;
+    font-weight: 700;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logout i{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width:375px){
+    a{
+        font-size: 14px;
+    }
+}

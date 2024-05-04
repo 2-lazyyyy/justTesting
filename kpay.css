@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
+
+body{
+    line-height: 1.6;
+    color: #ffffff;
+    font-size: 1rem;
+    background: #010022 url(./Images/bg.jpg) no-repeat center top;
+    font-weight: 400;
+}
+
+marquee{
+    background-color: rgba(0, 0, 0, 0.321);
+    font-size: 1.2rem;
+}
+
+.box4_con{
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-top: 20px;
+    box-shadow: 0 0 9px 4px #6b29bc;
+}
+
+.box4_header{
+    background-color: #2c2e34;
+    padding: 0.7rem 1.25rem;
+}
+
+.head_col_1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head_col_1 span{
+    font-weight: 600;
+}
+
+.head_val{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.head_val span{
+    color: #a168e7;
+}
+
+.box4_body{
+    background: #24262b;
+    padding: 1.25rem;
+}
+
+.selectedBank{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.bankDisplayImg{
+    width: 82px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.bankDisplayName{
+    font-weight: 700;
+}
+
+.bankDetail{
+    border: 2px solid #6b29bc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+    
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table.detailTable tr td:first-child{
+    border-right: 1px solid #6b29bc;
+}
+
+table.detailTable tr td{
+    padding: 3px 8px;
+}
+
+#bank_acc_name_span,#bank_acc_no_span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form_wrap{
+    margin-top: 20px;
+}
+
+.label_wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_label{
+    margin-bottom: 2px;
+    font-weight: 500;
+}
+
+label{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form_label_notis{
+    font-size: 12px;
+}
+
+input[type="tel"]{
+    color: #fff;
+    width: 100%;
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+.form-control{
+    background-color: rgba(0,0,0,0.3)!important;
+    min-height: 52px;
+    border: transparent;
+    border-bottom: 1px solid #dee3f026;
+    border-radius: 0.5rem;
+    color: #666;
+}
+
+.form-control:focus{
+    /* border-color: #6b29bc!important; */
+    outline: #6b29bc;
+    box-shadow: 0 0 10px #6b29bc;
+}
+
+.bank_amount_grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 8px;
+    margin-top: 8px;
+}
+
+.bank_amount_grid button{
+    cursor: pointer;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(222,227,240,0.15);
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+input[type="file"]{
+    font-size: 17px;
+    padding: 10px 0 0 10px;
+}
+
+.submit_btn_wrap{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 15px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.submit_btn_wrap button.backBtn{
+    background-color: rgba(222,227,240,.15);
+    height: 52px;
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+.submit_btn_wrap button.payBtn{
+    background-color: #a168e7;
+    height: 52px;
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+@media only screen and (max-width:375px){
+    table.detailTable tr td{
+        font-size: 14px;
+    }
+}
